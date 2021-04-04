@@ -13,12 +13,17 @@ class SearchVC: UIViewController {
   let usernameTextField = GFTextField()
   let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
   
+  
+  var isUserNameEntered: Bool { !usernameTextField.text!.isEmpty }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    usernameTextField.delegate = self
     view.backgroundColor = .systemBackground
     configureLogoImageView()
     configureTextField()
     configureCallToActionButtom()
+    createDismissKeyboardTapGesture()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +57,7 @@ class SearchVC: UIViewController {
   
   func configureCallToActionButtom() {
     view.addSubview(callToActionButton)
-    
+    callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside )
     NSLayoutConstraint.activate([
       callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
       callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -61,5 +66,23 @@ class SearchVC: UIViewController {
     ])
   }
   
+  func createDismissKeyboardTapGesture() {
+    let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+    view.addGestureRecognizer(tap)
+  }
   
+  @objc func pushFollowerListVC() {
+    guard isUserNameEntered else { return }
+    let followerListVC = FollowerListVC()
+    followerListVC.username = usernameTextField.text
+    followerListVC.title = usernameTextField.text
+    navigationController?.pushViewController(followerListVC, animated: true)
+  }
+}
+
+extension SearchVC: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    pushFollowerListVC()
+    return true
+  }
 }
