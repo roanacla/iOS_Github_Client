@@ -32,7 +32,7 @@
 		DBE84FC026193ED400C848C3 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		DBE84FC326193F0D00C848C3 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		DBE84FC726194B0600C848C3 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
-		DBE84FCC261953F800C848C3 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = SOURCE_ROOT; };
+		DBE84FCC261953F800C848C3 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GFTextField.swift; path = "iOS_Github_Client/Custom Views/GFTextField.swift"; sourceTree = SOURCE_ROOT; };
 		DBE84FCF261A375000C848C3 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		DBE84FE3261C1C9D00C848C3 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		DBE84FE6261C1E4B00C848C3 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
@@ -70,22 +70,54 @@
 		DBE84FA7261936F500C848C3 /* iOS_Github_Client */ = {
 			isa = PBXGroup;
 			children = (
-				DBE84FCC261953F800C848C3 /* GFTextField.swift */,
-				DBE84FA8261936F500C848C3 /* AppDelegate.swift */,
-				DBE84FC726194B0600C848C3 /* GFButton.swift */,
-				DBE84FAA261936F600C848C3 /* SceneDelegate.swift */,
+				DBE84FF2261C2A3F00C848C3 /* Extensions */,
+				DBE84FF1261C2A0600C848C3 /* Custom Views */,
+				DBE84FF0261C29D500C848C3 /* Screens */,
+				DBE84FF3261C2A9E00C848C3 /* Support */,
+			);
+			path = iOS_Github_Client;
+			sourceTree = "<group>";
+		};
+		DBE84FF0261C29D500C848C3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
 				DBE84FC026193ED400C848C3 /* SearchVC.swift */,
 				DBE84FCF261A375000C848C3 /* FollowerListVC.swift */,
 				DBE84FC326193F0D00C848C3 /* FavoritesListVC.swift */,
-				DBE84FB1261936F600C848C3 /* Assets.xcassets */,
-				DBE84FB3261936F600C848C3 /* LaunchScreen.storyboard */,
-				DBE84FB6261936F600C848C3 /* Info.plist */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DBE84FF1261C2A0600C848C3 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBE84FCC261953F800C848C3 /* GFTextField.swift */,
+				DBE84FC726194B0600C848C3 /* GFButton.swift */,
 				DBE84FE3261C1C9D00C848C3 /* GFTitleLabel.swift */,
 				DBE84FE6261C1E4B00C848C3 /* GFBodyLabel.swift */,
 				DBE84FE9261C1EF700C848C3 /* GFAlertVC.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		DBE84FF2261C2A3F00C848C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				DBE84FEC261C259A00C848C3 /* UIViewController+Ext.swift */,
 			);
-			path = iOS_Github_Client;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DBE84FF3261C2A9E00C848C3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				DBE84FA8261936F500C848C3 /* AppDelegate.swift */,
+				DBE84FAA261936F600C848C3 /* SceneDelegate.swift */,
+				DBE84FB1261936F600C848C3 /* Assets.xcassets */,
+				DBE84FB3261936F600C848C3 /* LaunchScreen.storyboard */,
+				DBE84FB6261936F600C848C3 /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
