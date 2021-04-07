@@ -79,6 +79,7 @@
 				DBE84FF1261C2A0600C848C3 /* Custom Views */,
 				DBE84FF0261C29D500C848C3 /* Screens */,
 				DBE84FF3261C2A9E00C848C3 /* Support */,
+				DBE84FB6261936F600C848C3 /* Info.plist */,
 			);
 			path = iOS_Github_Client;
 			sourceTree = "<group>";
@@ -120,7 +121,6 @@
 				DBE84FAA261936F600C848C3 /* SceneDelegate.swift */,
 				DBE84FB1261936F600C848C3 /* Assets.xcassets */,
 				DBE84FB3261936F600C848C3 /* LaunchScreen.storyboard */,
-				DBE84FB6261936F600C848C3 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
